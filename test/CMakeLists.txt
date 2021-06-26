@@ -8,6 +8,6 @@ include_directories(${PROJECT_SOURCE_DIR}/src/encrypt
 
 add_executable(testAll ${test_src})
 
-target_link_libraries(testAll PRIVATE gc_encrypt ${GTEST_BOTH_LIBRARIES} ${CRYPTO} pthread)
+target_link_libraries(testAll PRIVATE util_encrypt ${GTEST_BOTH_LIBRARIES} ${CRYPTO} pthread)
 
 install(TARGETS testAll DESTINATION bin)
