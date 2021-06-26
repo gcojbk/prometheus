@@ -4,10 +4,10 @@
 #include <string>
 #include <openssl/aes.h>
 
-class AES {
+class Aes {
  public:
-    AES() = default;
-    ~AES() = default;
+    Aes() = default;
+    ~Aes() = default;
 
     void AES_SetKey(const char* key);
     std::string AES_Encrypt(const char* input, int length);

@@ -19,7 +19,7 @@ TEST(test_base64, test_base64) {
 }
 
 TEST(test_aes, test_aes) {
-    AES aes;
+    Aes aes;
     aes.AES_SetKey("testaes");
     for (int i = 0; i < 1000; i++){
         size_t len = rand() % 1000;
@@ -34,7 +34,7 @@ TEST(test_aes, test_aes) {
 
 TEST(test_aes_base64, test_aes_base64) {
     Base64 b64;
-    AES aes;
+    Aes aes;
     aes.AES_SetKey("testaes");
     for (int i = 0; i < 1000; i++){
         size_t len = rand() % 1000;
