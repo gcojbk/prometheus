@@ -1,3 +1,11 @@
-# Prerequisites
+# cache
 build/*
 install/*
+
+# target
+*.a
+*.o
+*.so
+
+# vscode
+vscode/*
