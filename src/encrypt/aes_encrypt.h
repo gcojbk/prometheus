@@ -14,9 +14,6 @@ class AES {
     std::string AES_Decrypt(const unsigned char* input, int length);
 
  private:
-    void AES_SetKey();
-
- private:
     AES_KEY enc_key_;
     AES_KEY dec_key_;
     const char padding_ = 0;

@@ -9,7 +9,7 @@ void AES::AES_SetKey(const char* key) {
 }
 
 std::string AES::AES_Encrypt(const char* input, int length) {
-    int encode_len = (length + (16- 1)) & ~(16 - 1); //向上取整为16的倍数
+    int encode_len = (length + (16 - 1)) & ~(16 - 1);  // round up to multiple of 16
     std::string out;
     out.resize(encode_len);
     char* buffer = const_cast<char*>(input);
