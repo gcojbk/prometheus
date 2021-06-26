@@ -1,5 +1,5 @@
 #include <string>
-#include "base64.h"
+#include "base64_encode.h"
 
 std::string Base64::Encode (const unsigned char* in, int length) {
     int predict_len = (length + 2) / 3 * 4;

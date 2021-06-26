@@ -31,4 +31,4 @@ class Base64 {
     };
 };
 
-#endif   // ENCRYPT_BASE64_H_
+#endif   // end of ENCRYPT_BASE64_H_
