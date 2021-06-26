@@ -1,7 +1,7 @@
 #ifndef ENCRYPT_AES_H_
 #define ENCRYPT_AES_H_
 
-#include <bits/stdc++.h>
+#include <string>
 #include <openssl/aes.h>
 
 class AES {

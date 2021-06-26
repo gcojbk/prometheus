@@ -1,7 +1,5 @@
-#include <string>
-#include <openssl/aes.h>
+#include <cstring>
 #include "aes_encrypt.h"
-
 
 void AES::AES_SetKey(const char* key) {
     AES_set_encrypt_key(reinterpret_cast<const unsigned char*>(key), 128, &enc_key_);

@@ -3,8 +3,7 @@
 
 static constexpr const char* alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+!@#$&*()_";
 
-std::string randStr(const int len)
-{
+std::string randStr(const int len) {
     std::string str;
     srand(time(NULL));
     for (int i = 0; i < len; ++i)
@@ -14,13 +13,12 @@ std::string randStr(const int len)
     return str;
 }
 
-std::string randBinary(const int len)
-{
+std::string randBinary(const int len) {
     std::string str;
     srand(time(NULL));
     for (int i = 0; i < len; ++i)
     {
-        str += (rand() % 256);
+        str += static_cast<char>((rand() % 256));
     }
     return str;
 }
