@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <style>
+
+   .number-container {padding: 20px; text-align: center;}
+   .test-suite-container {margin: 50px;}
+   .test-button {float: right;}
+  </style>
+
+  <title>Google Test Report</title>
+</head>
+<body>
+  <div>
+    <div class="card test-suite-container">
+      <h5 class="card-header">AllTests</h5>
+      <div class="card-body">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm">
+
+              <h4 class="number-container">
+                <span class="badge badge-pill badge-primary">
+                  Number of tests: 5 [time is: 2021-06-27T22:40:42.577]
+                </span>
+              </h4>
+
+            </div>
+            <div class="col-sm">
+
+              <h4 class="number-container">
+                <span class="badge badge-pill badge-success">
+                  Passed: 5
+                </span>
+              </h4>
+
+            </div>
+            <div class="col-sm">
+
+              <h4 class="number-container">
+                <span class="badge badge-pill badge-danger">
+                  Failed: 0
+                </span>
+              </h4>
+
+            </div>
+			<div class="col-sm">
+
+              <h4 class="number-container">
+                <span class="badge badge-pill badge-warning">
+                  Disabled: 0
+                </span>
+              </h4>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="list-group">
+          
+            <a href=#test_base64 class="list-group-item list-group-item-action">
+              test_base64
+            </a>
+          
+            <a href=#test_aes class="list-group-item list-group-item-action">
+              test_aes
+            </a>
+          
+            <a href=#test_aes_base64 class="list-group-item list-group-item-action">
+              test_aes_base64
+            </a>
+          
+            <a href=#test_mempool class="list-group-item list-group-item-action">
+              test_mempool
+            </a>
+          
+            <a href=#test_threadpool class="list-group-item list-group-item-action">
+              test_threadpool
+            </a>
+          
+        </div>
+      </div>
+    </div>
+
+    
+      <div class="card test-suite-container" id=test_base64>
+        <div class="card-header">
+          <h5>
+            test_base64
+            <div class="btn-group btn-group-toggle test-button" data-toggle="buttons">
+              <label class="btn btn-primary btn-sm active">
+                <input type="radio" name="options" id=test_base64All autocomplete="off" checked> Show All
+              </label>
+              <label class="btn btn-success btn-sm">
+                <input type="radio" name="options" id=test_base64Passed autocomplete="off"> Show Only Passed
+              </label>
+              <label class="btn btn-danger btn-sm">
+                <input type="radio" name="options" id=test_base64Failed autocomplete="off"> Show Only Failed
+              </label>
+			  <label class="btn btn-warning btn-sm">
+                <input type="radio" name="options" id=test_base64Disabled autocomplete="off"> Show Only Disabled
+              </label>
+            </div>
+          </h5>
+        </div>
+        <div class="card-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm">
+
+                <h4 class="number-container">
+                  <span class="badge badge-pill badge-primary">
+                    Number of tests: 1
+                  </span>
+                </h4>
+
+              </div>
+              <div class="col-sm">
+
+                <h4 class="number-container">
+                  <span class="badge badge-pill badge-success">
+                    Passed: 1
+                  </span>
+                </h4>
+
+              </div>
+              <div class="col-sm">
+
+                <h4 class="number-container">
+                  <span class="badge badge-pill badge-danger">
+                    Failed: 0
+                  </span>
+                </h4>
+
+              </div>
+			  <div class="col-sm">
+
+                <h4 class="number-container">
+                  <span class="badge badge-pill badge-warning">
+                    Disabled: 0
+                  </span>
+                </h4>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion" id=test_base64FailedTests>
+            
+              
+            
+          </div>
+          <div class="accordion" id=test_base64PassedTests>
+            
+              
+                <div class="card border-success mb-3">
+                  <div class="card-header" id=test_base64PassedHeading>
+                    <h2 class="mb-0">
+                      <button class="btn btn-link text-success" type="button" data-toggle="collapse" data-target=#test_base64PassedCollapse aria-expanded="false" aria-controls=test_base64PassedCollapse>
+                        test_base64
+                      </button>
+                    </h2>
+                  </div>
+
+                  <div id=test_base64PassedCollapse class="collapse" aria-labelledby=test_base64PassedHeading data-parent=#test_base64PassedTests>
+                    <div class="card-body">
+                      <h5 class="card-title">Time: 0.018</h5>
+                    </div>
+                  </div>
+                </div>
+              
+            
+          </div>
+		  <div class="accordion" id=test_base64DisabledTests>
+            
+              
+            
+          </div>
+        </div>
+      </div>
+    
+      <div class="card test-suite-container" id=test_aes>
+        <div class="card-header">
+          <h5>
+            test_aes
+            <div class="btn-group btn-group-toggle test-button" data-toggle="buttons">
+              <label class="btn btn-primary btn-sm active">
+                <input type="radio" name="options" id=test_aesAll autocomplete="off" checked> Show All
+              </label>
+              <label class="btn btn-success btn-sm">
+                <input type="radio" name="options" id=test_aesPassed autocomplete="off"> Show Only Passed
+              </label>
+              <label class="btn btn-danger btn-sm">
+                <input type="radio" name="options" id=test_aesFailed autocomplete="off"> Show Only Failed
+              </label>
+			  <label class="btn btn-warning btn-sm">
+                <input type="radio" name="options" id=test_aesDisabled autocomplete="off"> Show Only Disabled
+              </label>
+            </div>
+          </h5>
+        </div>
+        <div class="card-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm">
+
+                <h4 class="number-container">
+                  <span class="badge badge-pill badge-primary">
+                    Number of tests: 1
+                  </span>
+                </h4>
+
+              </div>
+              <div class="col-sm">
+
+                <h4 class="number-container">
+                  <span class="badge badge-pill badge-success">
+                    Passed: 1
+                  </span>
+                </h4>
+
+              </div>
+              <div class="col-sm">
+
+                <h4 class="number-container">
+                  <span class="badge badge-pill badge-danger">
+                    Failed: 0
+                  </span>
+                </h4>
+
+              </div>
+			  <div class="col-sm">
+
+                <h4 class="number-container">
+                  <span class="badge badge-pill badge-warning">
+                    Disabled: 0
+                  </span>
+                </h4>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion" id=test_aesFailedTests>
+            
+              
+            
+          </div>
+          <div class="accordion" id=test_aesPassedTests>
+            
+              
+                <div class="card border-success mb-3">
+                  <div class="card-header" id=test_aesPassedHeading>
+                    <h2 class="mb-0">
+                      <button class="btn btn-link text-success" type="button" data-toggle="collapse" data-target=#test_aesPassedCollapse aria-expanded="false" aria-controls=test_aesPassedCollapse>
+                        test_aes
+                      </button>
+                    </h2>
+                  </div>
+
+                  <div id=test_aesPassedCollapse class="collapse" aria-labelledby=test_aesPassedHeading data-parent=#test_aesPassedTests>
+                    <div class="card-body">
+                      <h5 class="card-title">Time: 0.021</h5>
+                    </div>
+                  </div>
+                </div>
+              
+            
+          </div>
+		  <div class="accordion" id=test_aesDisabledTests>
+            
+              
+            
+          </div>
+        </div>
+      </div>
+    
+      <div class="card test-suite-container" id=test_aes_base64>
+        <div class="card-header">
+          <h5>
+            test_aes_base64
+            <div class="btn-group btn-group-toggle test-button" data-toggle="buttons">
+              <label class="btn btn-primary btn-sm active">
+                <input type="radio" name="options" id=test_aes_base64All autocomplete="off" checked> Show All
+              </label>
+              <label class="btn btn-success btn-sm">
+                <input type="radio" name="options" id=test_aes_base64Passed autocomplete="off"> Show Only Passed
+              </label>
+              <label class="btn btn-danger btn-sm">
+                <input type="radio" name="options" id=test_aes_base64Failed autocomplete="off"> Show Only Failed
+              </label>
+			  <label class="btn btn-warning btn-sm">
+                <input type="radio" name="options" id=test_aes_base64Disabled autocomplete="off"> Show Only Disabled
+              </label>
+            </div>
+          </h5>
+        </div>
+        <div class="card-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm">
+
+                <h4 class="number-container">
+                  <span class="badge badge-pill badge-primary">
+                    Number of tests: 1
+                  </span>
+                </h4>
+
+              </div>
+              <div class="col-sm">
+
+                <h4 class="number-container">
+                  <span class="badge badge-pill badge-success">
+                    Passed: 1
+                  </span>
+                </h4>
+
+              </div>
+              <div class="col-sm">
+
+                <h4 class="number-container">
+                  <span class="badge badge-pill badge-danger">
+                    Failed: 0
+                  </span>
+                </h4>
+
+              </div>
+			  <div class="col-sm">
+
+                <h4 class="number-container">
+                  <span class="badge badge-pill badge-warning">
+                    Disabled: 0
+                  </span>
+                </h4>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion" id=test_aes_base64FailedTests>
+            
+              
+            
+          </div>
+          <div class="accordion" id=test_aes_base64PassedTests>
+            
+              
+                <div class="card border-success mb-3">
+                  <div class="card-header" id=test_aes_base64PassedHeading>
+                    <h2 class="mb-0">
+                      <button class="btn btn-link text-success" type="button" data-toggle="collapse" data-target=#test_aes_base64PassedCollapse aria-expanded="false" aria-controls=test_aes_base64PassedCollapse>
+                        test_aes_base64
+                      </button>
+                    </h2>
+                  </div>
+
+                  <div id=test_aes_base64PassedCollapse class="collapse" aria-labelledby=test_aes_base64PassedHeading data-parent=#test_aes_base64PassedTests>
+                    <div class="card-body">
+                      <h5 class="card-title">Time: 0.029</h5>
+                    </div>
+                  </div>
+                </div>
+              
+            
+          </div>
+		  <div class="accordion" id=test_aes_base64DisabledTests>
+            
+              
+            
+          </div>
+        </div>
+      </div>
+    
+      <div class="card test-suite-container" id=test_mempool>
+        <div class="card-header">
+          <h5>
+            test_mempool
+            <div class="btn-group btn-group-toggle test-button" data-toggle="buttons">
+              <label class="btn btn-primary btn-sm active">
+                <input type="radio" name="options" id=test_mempoolAll autocomplete="off" checked> Show All
+              </label>
+              <label class="btn btn-success btn-sm">
+                <input type="radio" name="options" id=test_mempoolPassed autocomplete="off"> Show Only Passed
+              </label>
+              <label class="btn btn-danger btn-sm">
+                <input type="radio" name="options" id=test_mempoolFailed autocomplete="off"> Show Only Failed
+              </label>
+			  <label class="btn btn-warning btn-sm">
+                <input type="radio" name="options" id=test_mempoolDisabled autocomplete="off"> Show Only Disabled
+              </label>
+            </div>
+          </h5>
+        </div>
+        <div class="card-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm">
+
+                <h4 class="number-container">
+                  <span class="badge badge-pill badge-primary">
+                    Number of tests: 1
+                  </span>
+                </h4>
+
+              </div>
+              <div class="col-sm">
+
+                <h4 class="number-container">
+                  <span class="badge badge-pill badge-success">
+                    Passed: 1
+                  </span>
+                </h4>
+
+              </div>
+              <div class="col-sm">
+
+                <h4 class="number-container">
+                  <span class="badge badge-pill badge-danger">
+                    Failed: 0
+                  </span>
+                </h4>
+
+              </div>
+			  <div class="col-sm">
+
+                <h4 class="number-container">
+                  <span class="badge badge-pill badge-warning">
+                    Disabled: 0
+                  </span>
+                </h4>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion" id=test_mempoolFailedTests>
+            
+              
+            
+          </div>
+          <div class="accordion" id=test_mempoolPassedTests>
+            
+              
+                <div class="card border-success mb-3">
+                  <div class="card-header" id=test_mempoolPassedHeading>
+                    <h2 class="mb-0">
+                      <button class="btn btn-link text-success" type="button" data-toggle="collapse" data-target=#test_mempoolPassedCollapse aria-expanded="false" aria-controls=test_mempoolPassedCollapse>
+                        test_mempool
+                      </button>
+                    </h2>
+                  </div>
+
+                  <div id=test_mempoolPassedCollapse class="collapse" aria-labelledby=test_mempoolPassedHeading data-parent=#test_mempoolPassedTests>
+                    <div class="card-body">
+                      <h5 class="card-title">Time: 0</h5>
+                    </div>
+                  </div>
+                </div>
+              
+            
+          </div>
+		  <div class="accordion" id=test_mempoolDisabledTests>
+            
+              
+            
+          </div>
+        </div>
+      </div>
+    
+      <div class="card test-suite-container" id=test_threadpool>
+        <div class="card-header">
+          <h5>
+            test_threadpool
+            <div class="btn-group btn-group-toggle test-button" data-toggle="buttons">
+              <label class="btn btn-primary btn-sm active">
+                <input type="radio" name="options" id=test_threadpoolAll autocomplete="off" checked> Show All
+              </label>
+              <label class="btn btn-success btn-sm">
+                <input type="radio" name="options" id=test_threadpoolPassed autocomplete="off"> Show Only Passed
+              </label>
+              <label class="btn btn-danger btn-sm">
+                <input type="radio" name="options" id=test_threadpoolFailed autocomplete="off"> Show Only Failed
+              </label>
+			  <label class="btn btn-warning btn-sm">
+                <input type="radio" name="options" id=test_threadpoolDisabled autocomplete="off"> Show Only Disabled
+              </label>
+            </div>
+          </h5>
+        </div>
+        <div class="card-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm">
+
+                <h4 class="number-container">
+                  <span class="badge badge-pill badge-primary">
+                    Number of tests: 1
+                  </span>
+                </h4>
+
+              </div>
+              <div class="col-sm">
+
+                <h4 class="number-container">
+                  <span class="badge badge-pill badge-success">
+                    Passed: 1
+                  </span>
+                </h4>
+
+              </div>
+              <div class="col-sm">
+
+                <h4 class="number-container">
+                  <span class="badge badge-pill badge-danger">
+                    Failed: 0
+                  </span>
+                </h4>
+
+              </div>
+			  <div class="col-sm">
+
+                <h4 class="number-container">
+                  <span class="badge badge-pill badge-warning">
+                    Disabled: 0
+                  </span>
+                </h4>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion" id=test_threadpoolFailedTests>
+            
+              
+            
+          </div>
+          <div class="accordion" id=test_threadpoolPassedTests>
+            
+              
+                <div class="card border-success mb-3">
+                  <div class="card-header" id=test_threadpoolPassedHeading>
+                    <h2 class="mb-0">
+                      <button class="btn btn-link text-success" type="button" data-toggle="collapse" data-target=#test_threadpoolPassedCollapse aria-expanded="false" aria-controls=test_threadpoolPassedCollapse>
+                        test_threadpool
+                      </button>
+                    </h2>
+                  </div>
+
+                  <div id=test_threadpoolPassedCollapse class="collapse" aria-labelledby=test_threadpoolPassedHeading data-parent=#test_threadpoolPassedTests>
+                    <div class="card-body">
+                      <h5 class="card-title">Time: 0.008</h5>
+                    </div>
+                  </div>
+                </div>
+              
+            
+          </div>
+		  <div class="accordion" id=test_threadpoolDisabledTests>
+            
+              
+            
+          </div>
+        </div>
+      </div>
+    
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script>
+    $("label").click(function()
+    {
+	  const testDesc = {"Passed": 6, "Failed": 6, "Disabled": 8}
+	  const testDescAll = {"Passed": 6, "Failed": 6, "Disabled": 8, "All": 0}
+      var testSuiteID = $(this).find("input").attr("id");
+      showAll(testSuiteID);
+	  
+	  for (var testName in testDesc)
+	  {
+		var tempTestDesc = $.extend({}, testDesc);
+		if (testSuiteID.includes(testName)) 
+		{
+		  // We need to hide everything other than the selected type
+		  var testNameLen = tempTestDesc[testName]
+		  delete tempTestDesc[testName]
+		  for (var tempTestName in tempTestDesc)
+		  {
+			var tempSuite = generateTestSuiteName(testSuiteID, testNameLen, tempTestName);
+			$(generateID(tempSuite)).hide();
+		  }
+		}
+	  }
+
+      function showAll(testSuiteID)
+      {
+		for (var testName in testDescAll)
+	    {
+		  var tempTestDesc = $.extend({}, testDescAll);
+		  
+		  if (testSuiteID.includes(testName)) 
+		  {
+		    // We want to show everything
+		    for (var tempTestName in tempTestDesc)
+		    {
+			  $(generateID(testSuiteID.replace(testName, tempTestName))).show();
+		    }
+		  }
+		}
+      }
+		
+	  function generateTestSuiteName(testSuiteName, len, newName) {
+		var tempName = testSuiteName.slice(0, -len) + newName;
+		return tempName;
+	  }
+	  
+      function generateID(testSuiteID) {
+        return "#" + testSuiteID + "Tests";
+      }
+    })
+  </script>
+</body>
+</html>
