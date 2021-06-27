@@ -17,7 +17,7 @@ class ThreadPool {
 
     template <typename Func, typename... Args >
     auto AddWork(Func&& func, Args&&... args)
-         -> std::future< typename std::result_of<Func(Args...)>::type>;
+         -> std::future< typename std::result_of<Func(Args...)>::type >;
          
     void Stop();
 
