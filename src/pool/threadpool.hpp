@@ -17,7 +17,7 @@ class ThreadPool {
 
     template <typename Func, typename... Args >
     auto AddWork(Func&& func, Args&&... args)
-         -> std::future< typename std::result_of<Func(Args...)>::type >;
+         -> std::future< typename std::result_of<Func(Args...)>::type>;
          
     void Stop();
 
@@ -72,9 +72,6 @@ void ThreadPool::InitPool(uint32_t n) {
                         this->cond_.wait(lock, [this]{return this->is_stop_.load() || !job_queue_.empty();} );
                         if (this->is_stop_.load() && job_queue_.empty()) {
                             return;
-                        }
-                        if (job_queue_.empty()) {
-                            continue;
                         }
                         job = std::move(job_queue_.front());
                         job_queue_.pop();
