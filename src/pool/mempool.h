@@ -14,5 +14,4 @@ class MemPool : public Singleton<MemPool>
 
 };
 
-
 #endif // end of UTIL_MEMPOOL_H_
