@@ -9,3 +9,6 @@ install/*
 
 # vscode
 .vscode/*
+
+# test
+Testing/*

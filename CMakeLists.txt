@@ -12,3 +12,6 @@ SET(CRYPTO libcrypto.a)
 
 add_subdirectory(src)
 add_subdirectory(test)
+
+enable_testing()
+add_test(NAME TestUtil COMMAND Test)
