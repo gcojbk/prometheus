@@ -45,7 +45,7 @@ jobs:
       working-directory: ${{github.workspace}}/test
       shell: bash 
       run: |
-        python google_test.py TestUtil.xml
+        python run_test.py TestUtil.xml
         git config --global user.name github-actions
         git config --global user.email github-actions@github.com
         git add -f test_result.html
