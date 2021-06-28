@@ -36,27 +36,16 @@ jobs:
       run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}
 
     - name: Run google test
-      working-directory: ${{github.workspace}}/build/test
-      shell: bash 
-      run: |
-        ./Test && mv *.xml ${{github.workspace}}/test
-
-    - name: Make test report
       working-directory: ${{github.workspace}}/test
       shell: bash 
       run: |
-        python run_test.py TestUtil.xml
-        git config --global user.name github-actions
-        git config --global user.email github-actions@github.com
-        git add -f test_result.html
-        git commit -m "make google test report"
+        ./Test
 
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: ${{ github.ref }}
-
+    - name: Make report && show
+      working-directory: ${{github.workspace}}/test 
+      shell: bash 
+      run: |
+        cat TestUtil.xml
     # - name: Test
     #   working-directory: ${{github.workspace}}/build
     #   # Execute tests defined by the CMake configuration.  
