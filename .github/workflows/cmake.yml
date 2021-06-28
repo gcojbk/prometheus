@@ -26,6 +26,11 @@ jobs:
       shell: bash 
       run: sudo apt-get install libgtest-dev && cd /usr/src/gtest && sudo cmake CMakeLists.txt && sudo make
 
+    - name: clang-format Check
+      # You may pin to the exact commit or the version.
+      # uses: jidicula/clang-format-action@9de2c171408b8c86f1b73ebfe3c208aef4a166ab
+      uses: jidicula/clang-format-action@v3.4.0
+
     - name: Configure CMake
       # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
       # See https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html?highlight=cmake_build_type
