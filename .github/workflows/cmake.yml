@@ -31,11 +31,12 @@ jobs:
 #       # uses: jidicula/clang-format-action@9de2c171408b8c86f1b73ebfe3c208aef4a166ab
 #       uses: jidicula/clang-format-action@v3.4.0
 
-    - name: clang-tidy check
+    - name: cppcheck-action
       # You may pin to the exact commit or the version.
-      # uses: muxee/clang-tidy-action@7b55a601bc127aeca89a8d1a67a74159e828fbd6
-      uses: muxee/clang-tidy-action@0.0.1-rc1
-  
+      # uses: deep5050/cppcheck-action@b4d7c69b911c24817691b4b210586568a858b4c5
+      uses: deep5050/cppcheck-action@v3.0
+
+
     - name: Configure CMake
       # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
       # See https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html?highlight=cmake_build_type
