@@ -15,4 +15,6 @@ if(UNIX)
 
 	link_directories(${GTEST_LIBRARY})
     target_link_libraries(Test PRIVATE util_encrypt util_pool ${GTEST_BOTH_LIBRARIES} ${CRYPTO} pthread)
+    
+    install(TARGETS Test DESTINATION ${PROJECT_SOURCE_DIR}/test)
 endif()
