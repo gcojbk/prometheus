@@ -2,7 +2,9 @@ cmake_minimum_required(VERSION 3.16)
 
 project(gc_util)
 
-add_definitions(-std=c++17)
+#add_definitions(-std=c++20)
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 SET(CMAKE_BUILD_TYPE "Debug")
 SET(CMAKE_INSTALL_PREFIX ${CMAKE_CURRENT_SOURCE_DIR}/install)
