@@ -34,7 +34,7 @@ jobs:
     - name: Build
       working-directory: ${{github.workspace}}/build
       shell: bash 
-      run: make && make install
+      run: make install -j8
 
     - name: Test
       working-directory: ${{github.workspace}}/build
