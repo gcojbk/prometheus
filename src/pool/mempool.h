@@ -4,14 +4,12 @@
 #include "singleton.h"
 #include <stdio.h>
 
-class MemPool : public Singleton<MemPool>
-{
- friend class Singleton<MemPool>;
+class MemPool : public Singleton<MemPool> {
+  friend class Singleton<MemPool>;
 
- private:
-    MemPool() {}
-    ~MemPool() {}
-
+private:
+  MemPool() {}
+  ~MemPool() {}
 };
 
 #endif // end of UTIL_MEMPOOL_H_

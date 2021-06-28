@@ -1,5 +1,5 @@
 
-file(GLOB encrypt_src  base64_encode.cc aes_encrypt.cc)
+file(GLOB encrypt_src base64_encode.cc aes_encrypt.cc)
 
 add_library(util_encrypt SHARED ${encrypt_src})
 
