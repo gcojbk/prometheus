@@ -9,6 +9,8 @@ if(UNIX)
     include_directories(${PROJECT_SOURCE_DIR}/src/encrypt
                         ${PROJECT_SOURCE_DIR}/src/pool
                         ${PROJECT_SOURCE_DIR}/src/pattern
+                        ${PROJECT_SOURCE_DIR}/src/log
+                        ${PROJECT_SOURCE_DIR}/3rdparty
                         ${GTEST_INCLUDE_DIRS})
 
     add_executable(Test ${test_src})

@@ -1,12 +1,19 @@
 #ifndef UTIL_LOG_H_
 #define UTIL_LOG_H_
 
+#ifndef FMT_HEADER_ONLY
+#define FMT_HEADER_ONLY
+#endif
+
 #include <forward_list>
-// #include <format>
 #include "singleton.h"
+#include "fmt/format.h"
+#include <iostream>
 
 class logger_impl_ : public Singleton<logger_impl_> {
-    
+
+    friend class Singleton<logger_impl_>;
+
     enum loglevel { debug, info, warn, error };
 
  public:
@@ -33,7 +40,9 @@ class logger_impl_ : public Singleton<logger_impl_> {
  private:
     template <typename Format, typename... Args>
     void log(loglevel level, const Format& fmt, Args&&... args) {
-        // todo
+        fmt::basic_memory_buffer<char> log_membuf_;
+        fmt::format_to(std::back_inserter(log_membuf_), fmt::runtime(fmt), std::forward<Args>(args)...);
+        std::cout << log_membuf_.data();
     }
 
  private:

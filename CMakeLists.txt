@@ -19,4 +19,4 @@ add_subdirectory(test)
 
 enable_testing()
 add_test(NAME Test COMMAND Test)
-# set_tests_properties (Test PROPERTIES FAIL_REGULAR_EXPRESSION "Failure")
+set_tests_properties (Test PROPERTIES FAIL_REGULAR_EXPRESSION "Failure")
