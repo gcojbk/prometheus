@@ -16,5 +16,5 @@ if(UNIX)
     add_executable(Test ${test_src})
 
 	link_directories(${GTEST_LIBRARY})
-    target_link_libraries(Test PRIVATE util_encrypt util_pool ${GTEST_BOTH_LIBRARIES} ${CRYPTO} pthread)
+    target_link_libraries(Test PRIVATE util_encrypt util_pool util_log ${GTEST_BOTH_LIBRARIES} ${CRYPTO} pthread)
 endif()

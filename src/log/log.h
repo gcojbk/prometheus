@@ -1,14 +1,17 @@
 #ifndef UTIL_LOG_H_
 #define UTIL_LOG_H_
 
+// support fmt-head-only library
 #ifndef FMT_HEADER_ONLY
 #define FMT_HEADER_ONLY
 #endif
 
-#include <forward_list>
 #include "singleton.h"
 #include "fmt/format.h"
+#include <forward_list>
 #include <iostream>
+#include <fstream>
+#include <sstream>
 
 class logger_impl_ : public Singleton<logger_impl_> {
     friend class Singleton<logger_impl_>;
@@ -37,16 +40,22 @@ class logger_impl_ : public Singleton<logger_impl_> {
     }
 
     inline void log_set_switch(bool s_) { g_log_switch_ = s_; }
-
     inline void set_log_mode_term() { g_log_mode_ = LogMode::TERM; }
     inline void set_log_mode_file() { g_log_mode_ = LogMode::FILE; }
     inline void set_log_mode_all() {g_log_mode_ = LogMode::ALL; }
+    inline void set_logfile(const std::string& file) { g_log_file_.open(file, std::ios::out); }
 
  private:
     template <typename Format, typename... Args>
     void log(LogLevel level, const Format& fmt, Args&&... args) {
         fmt::basic_memory_buffer<char> log_membuf_;
         fmt::format_to(std::back_inserter(log_membuf_), fmt::runtime(fmt), std::forward<Args>(args)...);
+        log_(level, log_membuf_);
+    }
+
+    template <typename T>
+    void log_to_(T&& t) {
+        t << g_log_context_.rdbuf();
     }
 
  private:
@@ -54,20 +63,18 @@ class logger_impl_ : public Singleton<logger_impl_> {
     ~logger_impl_() {}
 
  private:
-
-    void log_to_file();
-    void log_to_term();
-    void log_set_switch();
+    void log_(LogLevel level, fmt::basic_memory_buffer<char>& log_buf);
 
  private:
-    bool g_log_switch_;
+    bool g_log_switch_ = true;
     LogMode g_log_mode_ = LogMode::TERM;
+    std::ofstream g_log_file_;
+    std::stringstream g_log_context_;
 };
 
+// namespace logger
 namespace logger {
-
-enum LogMode {TERM, FILE};
-
+enum LogMode { TERM = 0b01, FILE = 0b10 };
 template <typename Format, typename... Args>
 void debug(const Format& fmt, Args&&... args) {
     logger_impl_::getInstance().logdebug(fmt, std::forward<Args>(args)...);
@@ -76,7 +83,6 @@ void debug(const Format& fmt, Args&&... args) {
 template <typename Format, typename... Args>
 void info(const Format& fmt, Args&&... args) {
     logger_impl_::getInstance().loginfo(fmt, std::forward<Args>(args)...);
-
 }
 
 template <typename Format, typename... Args>
@@ -108,6 +114,9 @@ void setLogMode(LogMode mode){
     }
 }
 
-} // namespace log
+void setLogFile(const std::string& file){
+    logger_impl_::getInstance().set_logfile(file);
+} 
+}// namespace logger
 
 #endif // end of UTIL_LOG_H_
