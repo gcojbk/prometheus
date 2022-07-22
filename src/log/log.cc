@@ -21,14 +21,14 @@ void logger_impl_::log_(LogLevel level, fmt::basic_memory_buffer<char>& log_buf)
     }
     g_log_context_ << log_buf.data();
     
-    if (g_log_mode_ & LogMode::TERM == LogMode::TERM) {
+    if ((g_log_mode_ & LogMode::TERM) == LogMode::TERM) {
         if (level == LogLevel::ERROR) {
             log_to_(std::forward<std::ostream>(std::cerr));
         } else {
             log_to_(std::forward<std::ostream>(std::cout));
         }
     }
-    if (g_log_mode_ & LogMode::FILE == LogMode::FILE) {
+    if ((g_log_mode_ & LogMode::FILE) == LogMode::FILE) {
         if (g_log_file_.is_open()) {
             log_to_(std::forward<std::ofstream>(g_log_file_));
             g_log_file_.flush();

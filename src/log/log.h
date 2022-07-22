@@ -105,11 +105,11 @@ void setLogSwitch(std::string& switch_){
 }
 
 void setLogMode(LogMode mode){
-    if (mode & LogMode::TERM == LogMode::TERM) {
+    if ((mode & LogMode::TERM) == LogMode::TERM) {
         logger_impl_::getInstance().set_log_mode_term();
-    } else if (mode & LogMode::FILE == LogMode::FILE) {
+    } else if ((mode & LogMode::FILE) == LogMode::FILE) {
         logger_impl_::getInstance().set_log_mode_file();
-    } else if((mode & LogMode::FILE == LogMode::FILE) && (mode & LogMode::TERM == LogMode::TERM)) {
+    } else if(((mode & LogMode::FILE) == LogMode::FILE) && ((mode & LogMode::TERM) == LogMode::TERM)) {
         logger_impl_::getInstance().set_log_mode_all();
     }
 }
